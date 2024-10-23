@@ -1,0 +1,135 @@
+.main {
+    background-color: black;
+    height: 3rem;
+}
+.anchorStyle {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+.anchorStyle:hover{
+    border: 3px solid white;
+    padding: 5px;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+.imgCard_Style {
+    margin-top: 1rem;
+    margin-left: 5rem;
+    height: 7rem;
+    width: 7rem;
+}
+.text_style {
+    display: -webkit-box;
+    font-size: 15px;
+    color: lightgray;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.main_img_style {
+    display:flex;
+    gap:2rem;
+    cursor:pointer;
+    flex-wrap: wrap
+}
+.main_sub_img_style:hover {
+    transform: scale(1.05);
+    transition: ease-in-out .5s;
+    box-shadow: 6px 2px 10px #88a5bf7a ,  16px 10px 10px #fffc ;
+    border: 5px dotted lightblue;
+}
+.main_sub_img_style {
+    height: 25rem;
+    width: 21vw;
+    background-color:white;
+    box-shadow: 0px 0px 10px ;
+    border-radius: 1rem;
+}
+.svg_style {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+}
+.category_style {
+    border-radius:25px;
+    padding:5px;
+    text-transform: uppercase;
+    font-size: small;
+}
+.img_container {
+    background-color: rgb(240, 240, 240);
+    height: 10rem;
+    border-radius: 10px 10px 0px 0px;
+}
+.img_container img {
+    mix-blend-mode: multiply;
+}
+.title_style {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.price_style {
+    display:flex;
+    gap:1rem;
+    position:relative;
+    justify-content:space-between
+}
+.close-btn-style {
+    float:right;
+    height:2rem;
+    width:2rem;
+    cursor:pointer;
+    margin: 1rem;
+}
+.w-half {
+    width: 50%;
+}
+.offer-style {
+    height: 2rem;
+    width: 6rem;
+    background-color: lightblue;
+    padding: 5px;
+    border-radius: 20px;
+}
+.preview-style {
+    display:flex;
+    padding:1rem;
+    gap: 2rem;
+}
+.bottom-btn-style {
+    width:fit-content;
+    height:3rem;
+    background-color: rgb(125, 241, 125);
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.bottom-btn-style:hover {
+    background-color: rgb(67, 177, 67);
+}
+.qunt-icon-style {
+    height:2rem;
+    width:2rem;
+}
+.descrip-style {
+    cursor: pointer;
+}
+
+
+.abc:hover .detalied-descrp-style {
+    display: block;
+}
+.detalied-descrp-style {
+    height: 15rem;
+    width: 20rem;
+    background-color: #F0F8FF;
+    position: absolute;
+    left: 10rem;
+    padding: 5px;
+    top: -40px;
+    word-wrap: break-word;
+}
