@@ -90,10 +90,10 @@
 }
 .offer-style {
     height: 2rem;
-    width: 6rem;
+    width: max-content;
     background-color: lightblue;
     padding: 5px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 .preview-style {
     display:flex;

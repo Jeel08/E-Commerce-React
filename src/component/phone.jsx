@@ -11,9 +11,9 @@ import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import star from '../svg/star-svgrepo-com.svg';
 import redLike from '../svg/like/red-heart-svgrepo-com.svg';
+import Carousel from 'react-bootstrap/Carousel';
 
-const ImgCard = () => {
-    // const [arr,setArr] = useState([]);
+const PhoneProducts = () => {
     const [newArr,setNewArr] = useState([]);
     const [show,setShow] = useState(false);
     const [formdata,setFormData] = useState({});
@@ -29,11 +29,12 @@ const ImgCard = () => {
     // },[]);
 
     useEffect(()=>{
-      fetch('https://dummyjson.com/products/1')
+      fetch('https://dummyjson.com/products/search?q=phone')
       .then(res => res.json())
-      .then(json=>setNewArr([json]));
+      .then(json=>setNewArr(json?.products));
     },[]);
-
+    console.log(newArr);
+    
     const handleOpen = (data) => {
       setFormData(data);
       setRate(Math.round(data.rating))
@@ -61,7 +62,7 @@ const ImgCard = () => {
     <>
     <div style={{height:"100%",marginTop:"3rem"}}>
 
-      <h3 style={{textAlign:"left",color:"cadetblue",marginBottom:"20px"}}> Product List</h3>
+      <h3 style={{textAlign:"left",color:"cadetblue",marginBottom:"20px"}}> Mobile and Accessories</h3>
     <section>
 
         <div className='main_img_style'>
@@ -69,10 +70,30 @@ const ImgCard = () => {
             newArr.map((ar)=>{
               return (
                 <>  
-                  <div className='main_sub_img_style' onClick={() => handleOpen(ar)}>
+                  <div className='main_sub_img_style' >
 
                       <div className='img_container'>
-                        <img src={ar.images[0]} alt="Img" className='imgCard_Style'/>
+                          
+                            {
+                            ar.images?.length === 1 ?
+                            <img src={ar.images[0]} alt="Img" className='imgCard_Style'/>
+                            : 
+                            <div>
+                                <Carousel data-bs-theme="dark">
+                                    {
+                                        ar.images?.map((imgs,id)=>{
+                                        return (
+                                            <>
+                                            <Carousel.Item key={id}>
+                                                <img src={imgs}  alt="Img" className='d-block w-100'/>
+                                            </Carousel.Item>
+                                            </>
+                                            )
+                                    })
+                                    }
+                                </Carousel>
+                            </div>
+                        }
                       </div>
 
                       <div className='p-3'>
@@ -184,4 +205,4 @@ const ImgCard = () => {
   )
 }
 
-export default ImgCard
+export default PhoneProducts

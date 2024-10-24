@@ -14,13 +14,13 @@ const Navbars = () => {
         <nav>
             <div className='row main'>
             <div className='col mt-2'>
-                <div className='anchorStyle paddingNavbar'>All</div>
+                <a href='/' className='anchorStyle paddingNavbar'>All Products</a>
             </div>
             <div className='col mt-2'>
-                <a href="/" className='anchorStyle paddingNavbar'>MX Player</a>
+                <a href="/phone" className='anchorStyle paddingNavbar'>Mobile and Accessories</a>
             </div>
             <div className='col mt-2'>
-                <a href="/book2" className='anchorStyle paddingNavbar'>Sell</a>
+                <a href="/cloth" className='anchorStyle paddingNavbar'>Clothes</a>
             </div>
             <div className='col mt-2'>
                 <a href="/book3" className='anchorStyle paddingNavbar'>Best Sellers</a>
