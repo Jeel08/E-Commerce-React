@@ -6,6 +6,7 @@
     text-decoration: none;
     color: white;
     padding: 5px;
+    cursor: pointer;
 }
 .anchorStyle:hover{
     border: 3px solid white;
@@ -118,8 +119,6 @@
 .descrip-style {
     cursor: pointer;
 }
-
-
 .abc:hover .detalied-descrp-style {
     display: block;
 }
@@ -132,4 +131,12 @@
     padding: 5px;
     top: -40px;
     word-wrap: break-word;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.search-input {
+    height: 2rem;
+    width: 10rem;
+    border-radius: 5px;
 }
